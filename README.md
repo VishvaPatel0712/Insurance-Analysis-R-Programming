@@ -1,3 +1,74 @@
+# AnalysisWork.R
+
+## Overview
+
+`AnalysisWork.R` is an R script designed to analyze an insurance dataset. It performs exploratory data analysis (EDA), data visualization, and statistical modeling to gain insights into the dataset. The script includes various operations such as data summarization, visualization, and predictive modeling using linear regression.
+
+## Features
+
+- **Data Loading and Inspection:**
+
+  - Reads the dataset from a CSV file.
+  - Displays the first few rows and column names.
+  - Checks for missing values and data types.
+
+- **Descriptive Statistics:**
+
+  - Calculates mean, median, and standard deviation for key numeric columns.
+  - Counts unique values in categorical columns.
+
+- **Data Visualization:**
+
+  - Histograms for age and BMI distribution.
+  - Scatter plots to visualize relationships (e.g., BMI vs. Charges).
+  - Box plots to compare distributions based on categories (e.g., charges by smoker status and region).
+  - Heatmaps for correlation matrix visualization.
+  - Violin plots for charge distributions across different regions.
+
+- **Data Transformation:**
+
+  - Converts categorical variables using one-hot encoding.
+  - Normalizes numerical columns to a 0-1 scale.
+
+- **Statistical Analysis & Machine Learning:**
+
+  - Linear regression to predict insurance charges based on age, BMI, children, and smoker status.
+  - Root Mean Squared Error (RMSE) calculation for model evaluation.
+  - Confidence intervals for average charges by region.
+  - T-test to analyze significant differences in charges between smokers and non-smokers.
+  - Feature importance analysis using decision trees.
+
+## Requirements
+
+To run this script, ensure that the following R packages are installed:
+
+- `ggplot2`
+- `dplyr`
+- `data.table`
+- `corrplot`
+- `rpart`
+
+You can install them using:
+
+```r
+install.packages(c("ggplot2", "dplyr", "data.table", "corrplot", "rpart"))
+```
+
+## Usage
+
+1. Update the CSV file path in the script:
+   ```r
+   df <- read.csv("C:/Users/USER/Downloads/insurance.csv")
+   ```
+2. Run the script in an R environment (e.g., RStudio).
+3. The script will print statistical summaries and generate various plots for analysis.
+
+## Output
+
+- Summary statistics printed in the console.
+- Various plots for data visualization.
+- Regression model output and predictions.
+
 
 ![Image2](https://github.com/user-attachments/assets/d723760f-cdec-4ac1-b73d-ea256883b53d)
 ![Image1](https://github.com/user-attachments/assets/977b0bf7-7522-476f-ad07-2eb36d9b8a08)
